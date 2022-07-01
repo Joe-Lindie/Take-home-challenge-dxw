@@ -16,21 +16,21 @@
       </h2>
 
       <!-- User Input -->
-      <form class="form" action="#">
-        <section></section>
+      <form class="form">
         <label for="acronyms">Government Acronyms</label>
         <input
           id="acronyms"
           type="text"
           name="government_acronyms"
           placeholder="DfT..."
+          required
         />
 
         <button id="search_button">Search</button>
       </form>
 
       <!-- Result(s) From Search -->
-      <p id="result"></p>
+      <p class="result" id="result"></p>
     </main>
     <script src="main.js"></script>
   </body>

@@ -41,4 +41,9 @@ html {
 
   .form button {
     cursor: pointer;
+    margin-bottom: 1rem;
+  }
+
+  .result {
+    text-align: center;
   }
