@@ -7,6 +7,8 @@ const result = document.getElementById("result")
 const acronyms = {
   AGO: "Attorney General Office",
   APA: "Asset Protection Agency",
+  BIS: "Department for Business, Innovation and Skills",
+  BEIS: "Department for Business, Energy and Industrial Strategy",
 }
 
 //EVENTLISTENER(S)
@@ -24,7 +26,7 @@ function acronymOfOrganisation() {
   return allAcronyms
 }
 
-//ACRONYM DOES NOT EXIST
+//ACRONYM DOES NOT EXIST FUNCTION
 function acronymDoesNotExist(event) {
   event.preventDefault()
 
@@ -34,7 +36,17 @@ function acronymDoesNotExist(event) {
   if (!acronymArray.includes(userGuess)) {
     result.innerHTML = `The acronym ${userGuess} does not match a Government organisation in our database!`
   } else {
-    result.innerHTML = `Grabbing your data now...`
-    // else Call the acronym Does Exist function
+    acronymDoesExist()
   }
+}
+
+//ACRONYM EXISTS FUNCTION
+function acronymDoesExist() {
+  const acronymArray = acronymOfOrganisation()
+  const indexOfacronymArray = acronymArray.indexOf(userInput.value)
+
+  const fullNameArray = fullNameOfOrganisation()
+  const fullNameOfGovAgency = fullNameArray[indexOfacronymArray]
+
+  result.innerHTML = `The UK Government acronym for ${userInput.value} is ${fullNameOfGovAgency}.`
 }
