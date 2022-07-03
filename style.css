@@ -86,3 +86,16 @@ html {
     padding-top: 3rem;
     line-height: 2rem;
   }
+
+  .info_bold {
+    font-weight: bold;
+  }
+
+  .error {
+    color: red;
+  }
+
+  .error_guess {
+    font-weight: bold;
+  }
+

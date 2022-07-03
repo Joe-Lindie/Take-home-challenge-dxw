@@ -152,12 +152,15 @@ function acronymDoesNotExist(event) {
   const acronymArray = acronymOfOrganisation()
 
   if (userGuess === "") {
-    alert("Error: Please enter an acronym")
+    alert(`Error: Please enter an acronym`)
     return
   }
 
   if (!acronymArray.includes(userGuess)) {
-    result.innerHTML = `The acronym ${userGuess} does not match a Government organisation in our database!`
+    result.innerHTML = `
+    <div class="error"> 
+      The acronym <span class="error_guess">${userGuess}</span> does not match a Government organisation in our database!
+    </div>`
   } else {
     acronymDoesExist()
   }
@@ -176,7 +179,9 @@ function acronymDoesExist() {
   const fullNameArray = fullNameOfOrganisation()
   const fullNameOfGovAgency = fullNameArray[indexOfacronymArray]
 
-  result.innerHTML = `The UK Government acronym for ${userInput.value} is ${fullNameOfGovAgency}.`
+  result.innerHTML = `
+     The UK Government acronym for <span class="info_bold">${userInput.value}</span> 
+     is <span class="info_bold">${fullNameOfGovAgency}</span>.`
 }
 
 //////////////////////////////////////////////////
