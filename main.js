@@ -151,6 +151,11 @@ function acronymDoesNotExist(event) {
   const userGuess = userInput.value
   const acronymArray = acronymOfOrganisation()
 
+  if (userGuess === "") {
+    alert("Error: Please enter an acronym")
+    return
+  }
+
   if (!acronymArray.includes(userGuess)) {
     result.innerHTML = `The acronym ${userGuess} does not match a Government organisation in our database!`
   } else {
@@ -191,9 +196,9 @@ function matchAvailableAcronyms() {
     })
 
     for (let i = 0; i < filteredAcronyms.length; i++) {
-      const option_value = document.createElement("option")
-      option_value.textContent = filteredAcronyms[i]
-      dropdown.appendChild(option_value)
+      const optionValue = document.createElement("option")
+      optionValue.textContent = filteredAcronyms[i]
+      dropdown.appendChild(optionValue)
     }
   })
 }
