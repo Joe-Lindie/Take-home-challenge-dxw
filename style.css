@@ -11,7 +11,7 @@ html {
     padding: 0;
   }
 
-  /* /////////////////// */
+  /* INTRODUCTION STYLING */
 
   section p {
     color: white;
@@ -29,6 +29,7 @@ html {
 
   section h2 {
     padding-bottom: 5rem;
+    font-weight: lighter;
   }
 
  
@@ -39,9 +40,7 @@ html {
     padding-left: 5rem;
   }
 
-  h2 {
-    font-weight: lighter;
-  }
+    /* USER INPUT STYLING */
 
   .form {
     display: flex;
@@ -49,21 +48,41 @@ html {
     flex-direction: column;
   }
 
-  .form label {
-    margin-top: 3rem;
+  .container {
+    flex-direction: row;
   }
 
-  .form label,
-  .form input {
+  .form label {
+    margin-top: 3rem;
     margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+   
+  }
+
+  .form input {
+    border: 2px solid black;
+    padding: 0.5rem 6rem;
     text-align: center;
   }
 
   .form button {
     cursor: pointer;
-    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color:rgb(32,116,188);
+    border: none;
   }
+
+  .form button img {
+    width: 0.8rem;
+    color: white;
+  }
+
+  /* OUTPUT INPUT STYLING */
 
   .result {
     text-align: center;
+    padding-top: 3rem;
+    line-height: 2rem;
   }

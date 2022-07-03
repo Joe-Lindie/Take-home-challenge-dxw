@@ -21,19 +21,21 @@
 
       <!-- User Input -->
       <form class="form">
-        <label for="acronyms">Government Acronyms</label>
-        <input
-          id="acronyms"
-          type="text"
-          name="government_acronyms"
-          list="dropdown"
-          placeholder="DfT..."
-          required
-        />
+        <label for="acronyms">Search</label>
+        <div class="container">
+          <input
+            id="acronyms"
+            type="text"
+            name="government_acronyms"
+            list="dropdown"
+            placeholder="DfT..."
+            required
+          />
 
-        <datalist id="dropdown"> </datalist>
+          <datalist id="dropdown"> </datalist>
 
-        <button id="search_button">Search</button>
+          <button id="search_button"><img src="magnifier.png" alt="" /></button>
+        </div>
       </form>
 
       <!-- Result(s) From Search -->
