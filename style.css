@@ -13,10 +13,30 @@ html {
 
   /* /////////////////// */
 
-  h1, 
-  h2 {
-    text-align: center;
-    padding-bottom: 1rem;
+  section p {
+    color: white;
+    background-color: black;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  section h1 {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    font-weight: 400;
+  }
+
+  section h2 {
+    padding-bottom: 5rem;
+  }
+
+ 
+  section h1, 
+  section h2 {
+    background-color: rgb(32,116,188);
+    color: white;
+    padding-left: 5rem;
   }
 
   h2 {
