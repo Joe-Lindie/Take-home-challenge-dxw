@@ -159,7 +159,8 @@ function acronymDoesNotExist(event) {
   if (!acronymArray.includes(userGuess)) {
     result.innerHTML = `
     <div class="error"> 
-      The acronym <span class="error_guess">${userGuess}</span> does not match a Government organisation in our database!
+      The acronym <span class="error_guess">${userGuess}</span> 
+      does not match a Government organisation in our database!
     </div>`
   } else {
     acronymDoesExist()
@@ -194,17 +195,18 @@ function matchAvailableAcronyms() {
   const acronymArray = acronymOfOrganisation()
 
   userInput.addEventListener("keyup", (event) => {
+    dropdown.innerHTML = ""
     const matchAcronyms = event.target.value.toUpperCase()
 
     const filteredAcronyms = acronymArray.filter((acronyms) => {
       return acronyms.toUpperCase().includes(matchAcronyms)
     })
 
-    for (let i = 0; i < filteredAcronyms.length; i++) {
+    filteredAcronyms.forEach((acronyms) => {
       const optionValue = document.createElement("option")
-      optionValue.textContent = filteredAcronyms[i]
+      optionValue.textContent = acronyms
       dropdown.appendChild(optionValue)
-    }
+    })
   })
 }
 

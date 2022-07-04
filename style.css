@@ -11,8 +11,7 @@ html {
     padding: 0;
   }
 
-  /* INTRODUCTION STYLING */
-
+ /* INTRODUCTION STYLING */
   section p {
     color: white;
     background-color: black;
@@ -42,12 +41,15 @@ html {
   @media (max-width: 450px) { 
     section h1, 
     section h2 {
-      padding-left: 1rem;
+      padding: 2rem 1rem;
+    }
+
+    section h1 {
+      padding-top: 2rem;
     }
    }
 
-    /* USER INPUT STYLING */
-
+/* USER INPUT STYLING */
   .form {
     display: flex;
     align-items: center;
@@ -88,11 +90,10 @@ html {
     width: 1rem;
   }
 
-  /* OUTPUT INPUT STYLING */
-
+/* OUTPUT INPUT STYLING */
   .result {
     text-align: center;
-    padding-top: 3rem;
+    padding: 3rem 1rem;
     line-height: 2rem;
   }
 
